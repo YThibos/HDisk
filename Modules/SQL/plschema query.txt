@@ -1,0 +1,3 @@
+select plantennm, hoogte as planthoogte, hoogte1 as catMinhoogte, hoogte2 as catMaxhoogte, CATEGORIE, max(PRIJS) 
+from planten inner join plschema on planten.HOOGTE between plschema.hoogte1 and plschema.hoogte2
+group by plschema.CATEGORIE

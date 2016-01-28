@@ -1,0 +1,16 @@
+Omwille van historische en praktische (dikte cursus...) redenen wordt in de cursus de regels van OOP met voeten getreden.
+Het is uiteraard de bedoeling om de OOP regels te blijven hanteren in de eigen oefeningen en test:
+- Problemen opsplitsen in deelproblemen
+- Werken met entiteiten. U leest de datasets uit en maakt objecten aan.
+
+Bv schrijf niet 
+
+if(dataset[i].getString("naam")==dataset[i+1].getString("naam"))...
+
+Maar:
+
+Persoon x = new Persoon();
+Persoon y = new Persoon();
+x.setNaam(dataset[i].getString("naam")); 
+...
+if(x.getNaam()==y.getNaam())...

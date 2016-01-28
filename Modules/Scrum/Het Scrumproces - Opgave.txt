@@ -1,0 +1,13 @@
+Scrum in een andere context
+
+We keren terug naar de bouw van een huis.
+
+Zou je bij elke stap van het Scrumproces iets uit dit bouwproces kunnen plaatsen?
+
+    product backlog - blauwdruk v/h huis
+    sprint planning - TO DO: fundering -> skelet -> muren -> dak -> ...
+    sprint backlog - Fundering: put graven, gietkiesten maken en plaatsen, beton mixen, beton gieten/wapenen
+    demo - klant (toekomstige bewoners) komen naar de werf voor inspectie
+    afleverbaar product - huis = klaar
+
+Stuur je oplossing van deze opdracht door aan je coach.

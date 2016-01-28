@@ -1,0 +1,7 @@
+[user]
+	name = YannickThibos
+	email = yannick.thibos@gmail.com
+[alias]
+	historiek = log --pretty=format:'%h %ad %s (%an)'
+[gui]
+	recentrepo = C:/recepten
