@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+        xmlns:vdab="http://www.vdab.be/personen" 
+        targetNamespace="http://www.vdab.be/personen">
+    <simpleType name="AantalKinderen">
+        <restriction base="nonNegativeInteger">
+            <maxInclusive value="777"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="Wedde">
+        <restriction base="decimal">
+            <minInclusive value="0"/>
+            <maxInclusive value="10000"/>
+            <fractionDigits value="2"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="TaalCode">
+        <restriction base="string">
+            <pattern value="[A-Z]{2}"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="Geslacht">
+        <restriction base="string">
+            <enumeration value="man"/>
+            <enumeration value="vrouw"/>
+        </restriction>
+    </simpleType>
+    <complexType name="Persoon">
+        <attribute name="voornaam" use="required"/>
+        <attribute name="familienaam" use="required" />
+        <attribute name="aantalKinderen" type="vdab:AantalKinderen"/>
+        <attribute name="geboorteDatum" type="date" use="required"/>
+        <attribute name="geslacht" type="vdab:Geslacht" use="required"/>
+        <attribute name="wedde" type="vdab:Wedde"/>
+        <attribute name="gehuwd" type="boolean" use="required"/>        
+        <attribute name="taalCode" type="vdab:TaalCode" use="required"/>    
+    </complexType>
+    <element name="persoon" type="vdab:Persoon"/>
+</schema>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://www.vdab.be/Keynode"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.vdab.be/Keynode Keynode.xsd">
+    <typeones>
+        <type1 intAttrib="1" strAttrib="waarde1">
+            <intElement>1</intElement>
+            <strElement>waarde1</strElement>
+        </type1>
+        <type1 intAttrib="2" strAttrib="waarde2">
+            <intElement>2</intElement>
+            <strElement>waarde2</strElement>
+        </type1>
+        <type1 intAttrib="3" strAttrib="waarde3">
+            <intElement>3</intElement>
+            <strElement>waarde5</strElement>
+        </type1>
+    </typeones>
+
+    <typetwos>
+        <type2 intAttrib="1" strAttrib="waarde1">
+            <intElement>1</intElement>
+            <strElement>waarde1</strElement>
+        </type2>
+        <type2 intAttrib="2" strAttrib="waarde2">
+            <intElement>2</intElement>
+            <strElement>waarde2</strElement>
+        </type2>
+        <type2 intAttrib="3" strAttrib="waarde3">
+            <intElement>3</intElement>
+            <strElement>waarde3</strElement>
+        </type2>
+        <type2 intAttrib="4" strAttrib="waarde4">
+            <intElement>4</intElement>
+            <strElement>waarde4</strElement>
+        </type2>
+    </typetwos>
+</root>

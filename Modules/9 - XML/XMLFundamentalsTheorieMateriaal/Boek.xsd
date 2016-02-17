@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:vdab="http://www.vdab.be/boek"
+        targetNamespace="http://www.vdab.be/boek" elementFormDefault="qualified">
+    <simpleType name="ISBN">
+        <restriction base="integer">
+            <pattern value="978\d{10}"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="BeroepenCode">
+        <restriction base="integer">
+            <pattern value="\d{6}"/>
+        </restriction>        
+    </simpleType>
+    <complexType name="Curriculum">
+        <sequence>
+            <element name="naam" type="string"/>
+            <element name="beroepencode" type="vdab:BeroepenCode"/>
+        </sequence>
+        <attribute name="nr" type="positiveInteger"/>
+    </complexType>
+    <complexType name="Boek">
+        <sequence>
+            <element name="titel" type="string"/>
+            <element name="schrijver" type="string"/>
+            <element name="uitgever" type="string"/>
+            <element name="curriculum" type="vdab:Curriculum"/>
+        </sequence>
+        <attribute name="boeknr" type="positiveInteger"/>
+        <attribute name="isbn" type="vdab:ISBN"/>
+        <attribute name="nr" type="positiveInteger"/>
+    </complexType>
+    <element name="boek" type="vdab:Boek"/>
+</schema>

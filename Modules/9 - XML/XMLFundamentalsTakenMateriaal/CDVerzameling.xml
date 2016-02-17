@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cdverzameling>
+    <cd titel="album1" artiest="artiest1" jaar="2015"/>
+    <cd>
+        <titel>nogeenalbum</titel>
+        <artiest>tweedeartiest</artiest>
+        <jaar>2015</jaar>
+    </cd>
+    <cd>
+        <titel>kengeenalbums</titel>
+        <artiest>hijdiedownloadt</artiest>
+        <jaar>2015</jaar>
+    </cd>
+</cdverzameling>

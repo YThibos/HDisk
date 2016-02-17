@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:vdab="http://www.vdab.be/bieren"
+        targetNamespace="http://www.vdab.be/bieren" elementFormDefault="qualified">
+    
+    <simpleType name="NonEmptyString">
+        <restriction base="string">
+            <pattern value=".+"/>
+        </restriction>
+    </simpleType>
+    
+    <simpleType name="Postcode">
+        <restriction base="positiveInteger">
+            <minInclusive value="1000"/>
+            <maxInclusive value="9999"/>
+        </restriction>
+    </simpleType>
+    
+    <simpleType name="AlcoholPercent">
+        <restriction base="decimal">
+            <minExclusive value="0"/>
+            <fractionDigits value="2"/>
+        </restriction>
+    </simpleType>
+    
+    <complexType name="Bier">
+        <sequence>
+            <element name="naam" type="vdab:NonEmptyString"  />
+            <element name="brouwernr" type="positiveInteger"  />
+            <element name="soortnr" type="positiveInteger"  />
+            <element name="alcohol" type="vdab:AlcoholPercent" minOccurs="0" />
+        </sequence>
+        <attribute name="biernr" type="positiveInteger" use="required"/>
+    </complexType>
+    
+    <complexType name="Brouwerij">
+        <sequence>
+            <element name="naam" type="vdab:NonEmptyString"  />
+            <element name="adres" type="vdab:NonEmptyString"  />
+            <element name="postcode" type="vdab:Postcode"  />
+            <element name="gemeente" type="vdab:NonEmptyString" minOccurs="0" />
+            <element name="omzet" type="nonNegativeInteger" minOccurs="0" />
+        </sequence>
+        <attribute name="brouwernr" type="positiveInteger" use="required"/>
+    </complexType>
+    
+    <complexType name="Soort">
+        <sequence>
+            <element name="naam" type="vdab:NonEmptyString" minOccurs="0" />
+        </sequence>
+        <attribute name="soortnr" type="nonNegativeInteger" use="required"/>
+    </complexType>
+    
+    <complexType name="Bieren">
+        <sequence>
+            <element name="bier" type="vdab:Bier" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    
+    <complexType name="Brouwers">
+        <sequence>
+            <element name="brouwerij" type="vdab:Brouwerij" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    
+    <complexType name="Soorten">
+        <sequence>
+            <element name="soort" type="vdab:Soort" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    
+    <complexType name="BierenDB">
+        <sequence>
+            <element name="bieren" type="vdab:Bieren" minOccurs="0" maxOccurs="unbounded"/>
+            <element name="brouwers" type="vdab:Brouwers" minOccurs="0" maxOccurs="unbounded"/>
+            <element name="soorten" type="vdab:Soorten" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    
+    <element name="bierendb" type="vdab:BierenDB">
+        <key name="bierKey">
+            <selector xpath="vdab:bieren/vdab:bier"/>
+            <field xpath="@biernr"/>
+        </key>
+        <key name="brouwerKey">
+            <selector xpath="vdab:brouwers/vdab:brouwerij"/>
+            <field xpath="@brouwernr"/>
+        </key>
+        <key name="soortKey">
+            <selector xpath="vdab:soorten/vdab:soort"/>
+            <field xpath="@soortnr"/>
+        </key>
+        <keyref name="bier_brouwer" refer="vdab:brouwerKey">
+            <selector xpath="vdab:bieren/vdab:bier"/>
+            <field xpath="vdab:brouwernr"/>
+        </keyref>
+        <keyref name="bier_soort" refer="vdab:soortKey">
+            <selector xpath="vdab:bieren/vdab:bier"/>
+            <field xpath="vdab:soortnr"/>
+        </keyref>
+    </element>
+    
+</schema>

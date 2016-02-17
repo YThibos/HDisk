@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:vdab="http://www.vdab.be/cursisten"
+        targetNamespace="http://www.vdab.be/cursisten" elementFormDefault="qualified">
+    
+    <!-- SIMPLE TYPES -->
+    <simpleType name="nonEmptyString">
+        <restriction base="string">
+            <!-- 'Alles behalve witruimte, minstens 1x -->
+            <pattern value="\S+" />
+        </restriction>
+    </simpleType>
+    
+    <simpleType name="Emailaddress">
+        <restriction base="string">
+            <!-- '[tekenreeks]+@[tekenreeks]+.[a-z]+ -->
+            <pattern value=".+@.+\.[a-z]+" />
+        </restriction>
+    </simpleType>
+    
+    <simpleType name="Geboortedatum">
+        <restriction base="date">
+            <minInclusive value="1950-01-01" />
+        </restriction>
+    </simpleType>
+    
+    <simpleType name="Traject">
+        <restriction base="string">
+            <enumeration value="Java" />
+            <enumeration value="C#" />
+            <enumeration value="PHP" />
+        </restriction>
+    </simpleType>
+    
+    <!-- CURSIST DEFINITON -->
+    <complexType name="Cursist">
+        <all>
+            <element name="voornaam" type="vdab:nonEmptyString" />
+            <element name="familienaam" type="vdab:nonEmptyString" />
+            <element name="email" type="vdab:Emailaddress" />
+            <element name="geboren" type="vdab:Geboortedatum" />
+            <element name="traject" type="vdab:Traject" />
+        </all>
+    </complexType>
+    
+    <!-- ROOTNODE: Bevat de 'cursisten' -->
+    <complexType name="Rootnode">
+        <sequence>
+            <element name="cursist" type="vdab:Cursist" minOccurs="0" maxOccurs="unbounded" />
+        </sequence>
+    </complexType>
+
+    <!-- ROOTNODE & KEY DEFINITIONS -->    
+    <element name="root" type="vdab:Rootnode">
+        <key name="emailKey">
+            <selector xpath="vdab:cursist" />
+            <field xpath="vdab:email" />
+        </key>
+    </element>
+    
+</schema>

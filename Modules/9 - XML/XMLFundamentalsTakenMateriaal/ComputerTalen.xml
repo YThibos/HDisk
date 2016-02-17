@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<talen xmlns:proglang="http://www.computerlanguages.org/list">
+	<proglang:taal>Java</proglang:taal>
+	<proglang:taal>C#</proglang:taal>
+	<proglang:taal>PHP</proglang:taal>
+</talen>

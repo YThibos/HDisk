@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://www.vdab.be/cursisten"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.vdab.be/cursisten cursisten.xsd">
+    
+    <cursist>
+        <voornaam>Joe</voornaam>
+        <familienaam>Dalton</familienaam>
+        <email>joe@daltons.org</email>
+        <geboren>1966-08-01</geboren>
+        <traject>Java</traject>
+    </cursist>
+    
+    <cursist>
+        <voornaam>Jack</voornaam>
+        <familienaam>Dalton</familienaam>
+        <email>jack@daltons.org</email>
+        <geboren>1964-08-28</geboren>
+        <traject>C#</traject>
+    </cursist>
+    
+    <cursist>
+        <voornaam>Lucky</voornaam>
+        <familienaam>Luke</familienaam>
+        <email>lucky.luke@goodones.org</email>
+        <geboren>1965-01-31</geboren>
+        <traject>PHP</traject>
+    </cursist>
+
+    <cursist>
+        <!-- voornaam start met tab -->
+        <voornaam>Averell</voornaam>
+        <familienaam>§€!è%Dalton</familienaam>
+        <!-- ongeldig email -->
+        <email>averell@daltons.!</email>
+        <!-- 1949-12-31 > 1950-01-01 -->
+        <geboren>1949-12-31</geboren>
+        <!-- C++ niet in enum -->
+        <traject>C++</traject>
+    </cursist>
+    
+    <cursist>
+        <voornaam>Averell</voornaam>
+        <familienaam>Dalton</familienaam>
+        <!-- dupe key -->
+        <email>joe@daltons.org</email>
+        <geboren>1967-02-14</geboren>
+        <traject>Java</traject>
+    </cursist>
+
+</root>

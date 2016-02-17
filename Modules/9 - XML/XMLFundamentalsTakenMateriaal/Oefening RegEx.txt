@@ -1,0 +1,26 @@
+Je maakt een regular expression voor een e-mail adres
+? Het begint met één of meerdere tekens (om het even welke)
+? Daarna komt het teken @
+? Daarna volgen één of meerdere tekens (om het even welke)
+? Daarna komt een punt
+? Daarna volgen één of meerdere tekens (om het even welke)
+
+^.+@.+\..+$
+
+Je maakt een regular expression voor een oud Belgisch bankrekeningnummer
+? Het begint met 3 cijfers
+? Daarna komt het teken –
+? Daarna komen 7 cijfers
+? Daarna komt het teken –
+? Daarna komen 2 cijfers
+
+^\d{3}-\d{7}-\d{2}$
+
+Je maakt een regular expression voor een nummerplaat
+? Het begint met 1 cijfer
+? Daarna komt het teken –
+? Daarna komen 3 letters tussen A en Z
+? Daarna komt het teken –
+? Daarna komen 3 cijfers
+
+^\d-[A-Z]{3}-\d{3}$

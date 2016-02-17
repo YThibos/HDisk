@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:vdab="http://www.vdab.be/artikels"
+        targetNamespace="http://www.vdab.be/artikels" elementFormDefault="qualified">
+    <simpleType name="ProductieDatum">
+        <restriction base="date">
+            <minInclusive value="2000-01-01"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="Prijs">
+        <restriction base="decimal">
+            <minInclusive value="0"/>
+            <fractionDigits value="2"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="Lengte">
+        <restriction base="decimal">
+            <minExclusive value="0"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="Breedte">
+        <restriction base="decimal">
+            <minExclusive value="0"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="Hoogte">
+        <restriction base="decimal">
+            <minExclusive value="0"/>
+        </restriction>
+    </simpleType>
+    <complexType name="Artikel">
+        <all>
+            <element type="vdab:ProductieDatum" name="productieDatum" minOccurs="1" maxOccurs="1"/>
+            <element type="vdab:Prijs" name="prijs" minOccurs="1" maxOccurs="1"/>
+            <element type="vdab:Lengte" name="lengte" minOccurs="1" maxOccurs="1"/>
+            <element type="vdab:Breedte" name="breedte" minOccurs="1" maxOccurs="1"/>
+            <element type="vdab:Hoogte" name="hoogte" minOccurs="1" maxOccurs="1"/>
+        </all>
+    </complexType>
+    <element name="artikel" type="vdab:Artikel"/>
+</schema>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:vdab="http://www.vdab.be/Keynode"
+        targetNamespace="http://www.vdab.be/Keynode" elementFormDefault="qualified">
+    
+    <!-- TYPE1 DEF -->
+    <complexType name="Type1">
+        <sequence>
+            <element name="intElement" type="integer"/>
+            <element name="strElement" type="string"/>
+        </sequence>
+        <attribute name="intAttrib" type="integer" use="required"/>
+        <attribute name="strAttrib" type="string" use="required"/>
+    </complexType>
+    
+    <!-- TYPE2 DEF -->
+    <complexType name="Type2">
+        <sequence>
+            <element name="intElement" type="integer"/>
+            <element name="strElement" type="string"/>
+        </sequence>
+        <attribute name="intAttrib" type="integer" use="required"/>
+        <attribute name="strAttrib" type="string" use="required"/>
+    </complexType>
+    
+    <!-- TYPE1 PARENT -->
+    <complexType name="Typeones">
+        <sequence>
+            <element name="type1" type="vdab:Type1" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    
+    <!-- TYPE2 PARENT -->
+    <complexType name="Typetwos">
+        <sequence>
+            <element name="type2" type="vdab:Type2" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    
+    <!--ROOT DEFINITION -->
+    <complexType name="Rootnode">
+        <sequence>
+            <element name="typeones" type="vdab:Typeones"/>
+            <element name="typetwos" type="vdab:Typetwos"/>
+        </sequence>
+    </complexType>
+    
+    <!-- ROOT ELEMENT EN KEY DEF's -->
+    <element name="root" type="vdab:Rootnode">
+        <key name="type1key">
+            <selector xpath="vdab:typeones/vdab:type1"/>
+            <field xpath="vdab:strElement"/>
+        </key>
+        <key name="type2key">
+            <selector xpath="vdab:typetwos/vdab:type2"/>
+            <field xpath="vdab:strElement"/>
+        </key>
+        <keyref name="type12ref" refer="vdab:type2key">
+            <selector xpath="vdab:typeones/vdab:type1"/>
+            <field xpath="vdab:strElement"/>
+        </keyref>
+    </element>
+    
+</schema>

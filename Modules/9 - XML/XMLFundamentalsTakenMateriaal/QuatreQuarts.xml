@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quatrequarts>
+    <ingredienten>
+        <ingredient hoeveelheid="200gram" type="suiker"/>
+        <ingredient hoeveelheid="200gram" type="boter"/>
+        <ingredient>
+            <hoeveelheid>200gram</hoeveelheid>
+            <type>bloem</type>
+        </ingredient>
+        <ingredient>
+            <hoeveelheid>4</hoeveelheid>
+            <type>eieren</type>
+        </ingredient>
+    </ingredienten>
+</quatrequarts>
