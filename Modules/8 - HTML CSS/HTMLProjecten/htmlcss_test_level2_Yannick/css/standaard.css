@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+/* 
+
+PIXELSIZES 
+
+1em = 16px
+
+4px = 0.25em
+6 = 0.375em
+8 = 0.5em
+10 = 0.625em
+12 = 0.75em
+14 = 0.875em
+18 = 1.125em
+20 = 1.25em
+22 = 1.375em
+24 = 1.5em
+32 = 2em
+100 = 6.25em;
+
+*/
+
+/* NORMALIZE BROWSER SETTINGS */
+
+html, body, div, section, article, aside, nav {
+	margin: 0;
+	padding: 0;	
+}
+img {
+	/* zet images links van tekst, met margins rechts en onder */
+	border:		none;
+	float:		left;
+	margin:		0 1.25em 0.5em 0;
+}
+table {
+	border-collapse:	collapse;
+	border-spacing:		0;
+	empty-cells:		hide;
+}
+tr, td {
+	margin:		0;
+	padding:	0;
+}
+header {
+	padding-top:	0;		/* 6px */
+}
+section, aside {
+	margin-top:		0;			/* 4px */
+	margin-bottom:	0;
+}
+article {
+	margin:		0 20px 0 0;			/* gutter */
+	padding:	0.375em 0 1.25em;	/* 6px 20px, top left=right bottom */
+}
+article p {
+	margin:		0;
+	padding:	0 0 0.75em 0;		/* 12px bottom */
+}
+article h2 {
+	margin:		0.375 0;			/* 6px top&bottom left=right=0 */
+}
+
+
+/**** GENERAL RULES (fonts, colours, ..) ****/
+body {
+	/** font **/
+	font-size: 					16px;
+	font-family: 				"Palatino Linotype", "Times New Roman", Palatino, serif;
+
+	/** colours **/
+	background-color: 			white;
+	color:						#665950;
+	min-width: 					300px;
+}
+section {
+	overflow:					auto;
+	border-bottom:				1px solid lightgrey;
+}
+a {
+	color:						#00735D;
+	text-decoration: 			none;
+}
+h1 {
+	font-size:					2.5em;
+	font-weight: 				bold;
+	color:						#00735D;
+}
+h2 {
+	font-size:					1.500em;
+	font-weight: 				bold;
+	color:						#D64708;
+}
+h3 {
+	font-size:					1.250em;
+	font-style:					italic;
+	font-weight: 				bold;
+}
+p {
+	font-size:					0.875em;
+}
+em {
+	font-size: 					1.250em;
+	font-weight: 				bold;
+	color:						#9A3098;
+	letter-spacing: 			2px;
+}
+.content {
+	width:						75%;
+	margin:						0 auto;
+	max-width: 					1200px;
+}
+
+
+/**** HEADER/NAV RULES ****/
+
+.pagehead {
+	background-color: 			#D64708;
+	overflow: 					auto;
+}
+.navigatie ul {
+	padding:					0;
+	margin:						0;
+	width:						100%;
+
+	list-style-type: 			none;
+	display:					table;
+
+	background: 				inherit;
+}
+.navigatie ul li {
+	border-left:				1px solid white;
+	border-right: 				1px solid white;
+	width:						20%;  /* width/5items */
+
+	display:					table-cell;
+	text-align: 				center;
+}
+.navigatie ul li a {
+	height:						30px;
+	line-height: 				20px;
+
+	color:						white;
+
+	display:					block;
+}
+.navigatie ul li:hover {
+	background-color: 			#B61600;
+}
+.navigatie #active {
+	background-color: 			#B61600;
+}
+
+
+/**** INTRO RULES ****/
+img#tarzan {
+	float:						right;
+
+	padding-top:				0;
+	padding-right: 				0;
+	margin-top:					-30px;
+	margin-right:				0;
+
+	position: 					relative;
+	top: 						-5px;
+	right: 						0;
+}
+.intro .vacatures ul {
+	list-style: 				none;
+}
+.intro .vacatures ul li {
+	background-color: 			#D64708;
+	border-radius: 				25px;
+
+	display:					block;
+	overflow:					auto;
+	max-width: 					40%;
+	
+	margin-bottom: 5px;
+}
+.intro .vacatures ul li a {
+	color:						white;
+	font-weight: 				bold;
+
+	padding: 					3px 0 3px 10px;
+
+	display: 					block;
+}
+.intro .vacatures ul li:hover {
+	background-color: 			#00735D;
+}
+
+
+/**** JOBBESCHRIJVING RULES ****/
+article {
+	box-sizing:					border-box;
+	margin: 					0;
+	padding:					10px;
+	width:						25%;
+	min-height: 				500px;
+
+	float: 						left;
+	overflow: 					auto;
+}
+article#art2 {
+	width:						50%;
+
+	background: 				url("../img/drupal-8.png") no-repeat;
+	background-size: 			;
+}
+article #gitlink {
+	font-weight: 				bold;
+}
+article #gitlink:hover {
+	text-decoration:			underline;
+}
+
+
+
+/**** VERWACHTINGEN RULES ****/
+.verwachtingen ul {
+	list-style-type: 			none;
+	padding:					0;
+	margin:						0;
+}
+.verwachtingen ul li:nth-child(1) {
+	background-image: 			url("../img/home_128.png");
+	background-repeat: 			no-repeat;
+	background-position: 		0 0;
+}
+.verwachtingen ul li:nth-child(2) {
+	background-image: 			url("../img/female_128.png");
+	background-repeat: 			no-repeat;
+	background-position: 		0 0;
+}
+.verwachtingen ul li:nth-child(3) {
+	background-image: 			url("../img/pink_128.png");
+	background-repeat: 			no-repeat;
+	background-position: 		0 0;
+}
+.verwachtingen ul li {
+	padding-left: 				140px;
+	padding-top:				10px;
+	min-height:					140px;
+}
+
+
+/**** FOOTER RULES ****/
+footer {
+	background-color: 			#003233;
+	color:						white;
+}
+footer p {
+	float:						left;
+}
+footer #datum {
+	background-color: 			white;
+	color:						#303F43;
+	font-weight: 				bold;
+
+	padding:					0 5px;
+	margin-top:					15px;
+
+	float:						right;
+	display:					inline-block;
+}
+footer a:hover {
+	text-decoration: 			underline;
+	color:						#9A3098;
+}
+
+
+/*
+clearfix hack
+http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.clearFix:before, .clearFix:after {
+	content: " ";
+	display: table;
+}
+.clearFix:after {
+	clear: both;
+}

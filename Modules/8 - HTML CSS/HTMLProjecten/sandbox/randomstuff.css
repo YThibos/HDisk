@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+body {
+	font-size:		16px;
+	font-family:	Verdana, sans-serif;
+	width:			auto;
+	margin:			0 200px 0;
+}
+
+div.advertisement {
+	border:		dimgray 2px groove;
+	background:	silver;
+	
+	position: 	fixed;
+	right:		20px;
+	top:		20px;
+	width:		180px;
+	padding:	5px;
+}
+div.advertisement p {
+	height: 	auto;
+}
+
+/* box sizing */
+div.boxcontainer {
+	width:80%;
+	border:1em solid black;
+}
+div.boxbinnen {
+	box-sizing:border-box;
+	width:48%;
+	border:1em silver ridge;
+	float:left;
+}
+
+/* the floooow */
+.normalflow div {
+	margin:		8px;
+	border:		2px navy solid;
+	background:	silver;
+}
+.normalflow {
+	margin:		20px;
+	width:		400px;
+}
+
+/* padding of margin? */
+div.padding{
+margin:0;
+padding:0;
+}
+.buiten {
+border:1px solid blue;
+width: 600px;
+overflow:auto;
+}
+.binnen {
+width:auto;
+height:25px;
+}
+.tekst {
+padding: 0 20px;
+margin: 0 20px;
+background:black;
+color:white;
+}
+.volkleur {
+background: silver;
+padding: 0 10px;
+}
+.kleurmetgoot {
+background: silver;
+margin: 0 10px;
+}
+
+/* margin collapses */
+div.margincollapse { 
+	background:		silver; 
+	padding:		1px;
+	margin:			50px 0;
+}
+div.margincollapse p {
+	margin:			20px 0 0 0;
+	background:		#cf9;
+}
+div.margincollapse h2 {
+	margin:			50px 0 25px 0;
+	background:		#cfc;
+}
+
+/* pseudo selectors */
+ul.menu li:hover {
+	color:			red;
+}
+ul.menu li:active {
+	color:			green;
+}
+input:focus {
+	background:		teal;
+	color:			white;
+}
+pre:lang(gibberish) {
+	color:			navy;
+}
+
+/* box model */
+#outer {
+	background-color:	red;
+}
+
+#inner {
+	background-color:	salmon;
+	width:				50%;
+	border:				3px solid black;
+	padding:			50px 10px 25px 10px;
+	text-align:			center;
+	margin:				0px auto;	
+}
+
+/* display (menu) */
+
+#menu {
+	list-style-type:	none;
+	overflow:			auto;
+}
+#menu li {
+	display:			inline-block;
+	padding:			1em;
+	background-color:	silver;	
+}
+
+#menu li:hover {
+	background-color:	green;
+}
+#menu li a{
+	display:			inline;
+	text-decoration:	none;
+	color:				black;
+}
+#menu li a:hover {
+	color:pink;
+}
+#menu li:hover a {
+	color:				white;
+}
+
+
+/*clearfix hack*/
+.clearFix:before, .clearFix:after {
+content: " ";
+display: table;
+}
+.clearFix:after {
+clear: both;
+}
+/* enkel voor IE6/7 */
+.clearFix {
+*zoom: 1;
+}

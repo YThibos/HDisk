@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* NORMALIZE */
+
+html, body, div, section, article, aside, nav {
+	margin: 0;
+	padding: 0;	
+}
+img {
+	/* zet images links van tekst, met margins rechts en onder */
+	border:		none;
+	float:		left;
+	margin:		0 1.25em 0.5em 0;
+}
+table {
+	border-collapse:	collapse;
+	border-spacing:		0;
+	empty-cells:		hide;
+}
+tr, td {
+	margin:		0;
+	padding:	0;
+}
+header {
+	padding-top:	0.375em;		/* 6px */
+}
+section, aside {
+	margin-top:		0.25em;			/* 4px */
+	margin-bottom:	0.25em;
+}
+article {
+	margin:		0 20px 0 0;			/* gutter */
+	padding:	0.375em 0 1.25em;	/* 6px 20px, top left=right bottom */
+}
+article p {
+	margin:		0;
+	padding:	0 0 0.75em 0;		/* 12px bottom */
+}
+article h2 {
+	margin:		0.375 0;			/* 6px top&bottom left=right=0 */
+}
+
+
+/** KLEUR EN OPMAAK **/
+body {
+	font-family: 				"Verdana", "Arial", sans-serif;
+	font-size:					16px;
+}
+
+
+/** LAYOUT **/
+

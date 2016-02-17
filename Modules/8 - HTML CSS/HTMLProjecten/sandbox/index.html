@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link href="randomstuff.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="advertisement">
+		<h3>SPAMSPAMSPAM</h3>
+		<p>spam spam spam spam speimjq spm fjdfkqm</p>
+		<a href="http://www.goegel.be">pr0n</a>
+	</div>
+
+
+	<div class="boxcontainer clearFix">
+		<div class="boxbinnen">linkerhelft</div>
+		<div class="boxbinnen">rechterhelft</div>
+	</div>
+
+
+	<!-- normal flow --> 
+	<section class="normalflow">
+		<h2>Normal Flow</h2>
+		<div id="outer1">
+			<div id="inner1"> dit is inner1 met <span>span</span> en <a href="http://www.vdab.be">hyperlink</a></div>
+			<div id="inner2"> dit is inner2 </div>
+			<div style="border: 1px solid red; margin: 0;"><div id="inner3"> dit is inner3 </div></div>
+		</div>
+		<div id="outer2">dit is outer2</div>
+	</section>
+	
+	<!-- padding of margin ? -->
+	<div class="padding buiten">
+		<div class="binnen tekst">tekst tekst tekst tekst tekst tekst tekst tekst</div>
+		<div class="binnen volkleur">volkleur volkleur volkleur volkleur volkleur</div>
+		<div class="binnen tekst">tekst tekst tekst tekst tekst tekst tekst tekst</div>
+		<div class="binnen kleurmetgoot">kleurmetgoot kleurmetgoot kleurmetgoot </div>
+		<div class="binnen tekst">tekst tekst tekst tekst tekst tekst tekst tekst</div>
+		<div class="binnen volkleur">volkleur volkleur volkleur volkleur volkleur</div>
+		<div class="binnen tekst">tekst tekst tekst tekst tekst tekst tekst tekst</div>
+		<div class="binnen kleurmetgoot">kleurmetgoot kleurmetgoot kleurmetgoot </div>
+	</div>
+
+	<ul id="menu">
+		<li><a href="index.html">home</a></li>
+		<li><a href="#info">info</a></li>
+		<li><a href="#personalia">contact</a></li>
+		<li><a href="#form">nogiets</a></li>
+	</ul>
+
+	<!-- collapsing margins -->
+	<p>tekst.</p>
+	<div class="margincollapse">
+		<h2>margin-collapse tussen parent en child</h2>
+		<p>Biscuit candy marzipan sweet roll cotton candy lollipop. Jujubes liquorice sweet soufflé sweet carrot cake marzipan gummies ice cream. </p>
+	</div>
+	
+	<!-- box model stuff -->
+	<div id="outer">
+		<p>outer</p>
+		<div id="inner">
+			<p>inner</p>
+		</div>
+	</div>
+
+	<!-- hoveringgggg -->
+	<ul class="menu">
+		<li>Item1</li>
+		<li>Item1</li>
+		<li>Item1</li>
+		<li>Item1</li>
+	</ul>
+
+	<!-- simple forms -->
+	<div class="personalia">
+		<form method="post" action="http://www.ict.teno.be/formtest.php">
+			<fieldset>
+				<legend><u>Gegevens</u></legend>
+				<label for="voornaam">Voornaam: </label>
+				<input type="text" name="voornaam" id="voornaam" />
+				<label for="naam">Familienaam: </label>
+				<input type="text" name=naam" id="naam" /><br>
+				<label for="passwd">Wachtwoord: </label>
+				<input type="password" name="passwd" id="passwd" />
+				<input type="submit" value="Verzenden">
+			</fieldset>
+		</form>
+	</div>
+	
+	<form method="post" enctype="multipart/form-data" action="http://www.ict.teno.be/upload.php">
+		<legend><b>DUMP</b></legend>
+		<label for="upload">Upload file: </label>
+		<input type="file" name="upload" id="bestand" />
+		<input type="submit" />
+		<input name=”zoekterm” type=”search”>
+	</form>
+
+
+	<pre lang="gibberish">                         maxling
+		it is with a                 heart
+		heavy
+		that i admit loss of a feline
+		so             loved
+		
+		a friend lost to the
+		unknown
+		(night)
+
+		~cdr 11dec07
+	</pre>
+	
+	<blockquote>
+		Margin collapse zal NIET gebeuren in deze gevallen:
+		• in combinatie met het root element
+		• met float elementen
+		• met absoluut gepositioneerde elementen
+		• met inline-block elementen
+		• als de overflow property ingesteld op iets anders dan visible (de standaardwaarde)
+		• als de clear property ingesteld is op iets anders dan none
+		• horizontale marges combineren NOOIT
+	</blockquote>
+	
+	<table border="1">
+		<tr>
+			<th>&nbsp;</th>
+			<th>kolomtitel</th>
+			<th>kolomtitel</th>
+			<th>kolomtitel</th>
+			<th>kolomtitel</th>
+		</tr>
+		<tr>
+			<th>rijtitel</th>
+			<td rowspan="2" colspan="2">Colspan rowspan 2 cel</td>
+			<td>Gewone cel</td>
+			<td>Gewone cel</td>
+			<td rowspan="3">Rowpan 3 cel</td>
+		</tr>
+		<tr>
+			<th>rijtitel</th>
+			<td>Gewone cel</td>
+			<td>Gewone cel</td>
+			<td>Gewone cel</td>
+			<td>Gewone cel</td>
+		</tr>
+		<tr>
+			<th>rijtitel</th>
+			<td>Gewone cel</td>
+			<td>Gewone cel</td>
+			<td>Gewone cel</td>
+			<th>Ongewone cel</th>
+		</tr>
+	</table>
+	
+</body>
+</html>
