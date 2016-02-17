@@ -1,5 +1,5 @@
 [user]
-	name = YannickThibos
+	name = Yannick Thibos
 	email = yannick.thibos@gmail.com
 [alias]
 	historiek = log --pretty=format:'%h %ad %s (%an)'
